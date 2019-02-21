@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-nextjs",
+  "version": "1.0.0",
+  "description": "Beautiful Portfolio project using Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alernerdev/portfolio-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alernerdev/portfolio-nextjs/issues"
+  },
+  "homepage": "https://github.com/alernerdev/portfolio-nextjs#readme",
+  "dependencies": {
+    "next": "^8.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  }
+}
