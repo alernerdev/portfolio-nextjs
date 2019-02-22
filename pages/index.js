@@ -1,17 +1,15 @@
 import React from 'react';
 
+import Header from '../components/shared/Header';
+
 class Index extends React.Component {
 
     render() {
         return (
             <React.Fragment>
+                <Header />
                 <p>Welcome Page</p>
-                <a href='/'> Home </a>
-                <a href='/about'> About </a>
-                <a href='/portfolios'> Portfolio </a>
-                <a href='/blogs'> Blog </a>
-                <a href='/cv'> CV </a>
-            </React.Fragment> 
+            </React.Fragment>
         )
     }
 }
