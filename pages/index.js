@@ -1,16 +1,40 @@
 import React from 'react';
 
-import Header from '../components/shared/Header';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class Index extends React.Component {
 
+    constructor(props) {
+        super(props);
+        console.log("constructor");
+
+        this.state = {
+            title: 'state title index page'
+        }
+    }
+
+    componentDidMount() {
+        console.log("didMount");
+    }
+
     render() {
+        console.log("render");
+
         return (
-            <React.Fragment>
-                <Header />
+            <BaseLayout>
                 <p>Welcome Page</p>
-            </React.Fragment>
+                {this.state.title}
+                <button onClick = { ()=> {this.setState({title: 'hello'})}}>Change Title</button>
+            </BaseLayout>
         )
+    }
+
+    componentDidUpdate() {
+        console.log("componentDidUpdate");
+    }
+
+    componentWillUnmount() {
+        console.log("componentWillUnmount");
     }
 }
 
