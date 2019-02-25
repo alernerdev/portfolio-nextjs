@@ -21,16 +21,7 @@ class Header extends React.Component {
                 <Link href='/cv'>
                     <a> CV </a>
                 </Link>
-
-                <style jsx>
-                    {
-                        `a {
-                            font-size: 20px
-                        }
-                        `
-                    }
-                </style>
-            </React.Fragment>
+             </React.Fragment>
         );
     }
 }
