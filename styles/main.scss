@@ -1,5 +1,9 @@
 @import './shared/fonts';
+// pages
 @import './index';
+
+// components
+@import './header';
 
 html, body {
     height:100%;
@@ -14,3 +18,6 @@ html, body {
   color: white;
 }
   
+.absolute {
+  position: absolute;
+}
