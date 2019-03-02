@@ -1,12 +1,14 @@
 import React from 'react';
-import {withRouter} from 'next/router';
+import { withRouter } from 'next/router';
 import axios from 'axios';
 
 import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/BasePage';
+
 
 class Portfolio extends React.Component {
 
-    static async getInitialProps({query}) {
+    static async getInitialProps({ query }) {
         // getInitialProps recieves a context object with req, res, query, etc.
         const portfolioId = query.id;
         let portfolio = {};
@@ -19,16 +21,19 @@ class Portfolio extends React.Component {
         }
 
 
-        return {portfolio};
+        return { portfolio };
     }
 
     render() {
-        const {portfolio} = this.props;
+        const { portfolio } = this.props;
 
         return (
             <BaseLayout>
-                <h1>{portfolio.title}</h1>
-                <p>{portfolio.body}</p>
+                <BasePage>
+                    <h1>{portfolio.title}</h1>
+                    <p>{portfolio.body}</p>
+                </BasePage>
+
             </BaseLayout>
         )
     }

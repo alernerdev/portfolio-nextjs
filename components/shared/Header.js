@@ -10,6 +10,20 @@ import {
     NavLink
 } from 'reactstrap';
 
+import auth0 from '../../services/auth0';
+
+
+const Login = () => {
+    return (
+        <span onClick={auth0.login} className="nav-link port-navbar-link clickable"> Login </span>
+    )
+}
+const Logout = () => {
+    return (
+        <span className="nav-link port-navbar-link clickable"> Logout </span>
+    )
+}
+
 const BootstrapNavLink = (props) => {
     const { route, title } = props;
 
@@ -56,6 +70,12 @@ export default class Header extends React.Component {
                             </NavItem>
                             <NavItem className="port-navbar-item">
                                 <BootstrapNavLink route='/cv' title=' CV ' />
+                            </NavItem>
+                            <NavItem className="port-navbar-item">
+                                <Login />
+                            </NavItem>
+                            <NavItem className="port-navbar-item">
+                                <Logout />
                             </NavItem>
                         </Nav>
                     </Collapse>

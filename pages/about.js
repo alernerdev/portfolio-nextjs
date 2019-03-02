@@ -1,13 +1,16 @@
 import React from 'react';
 
 import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/BasePage';
 
 class About extends React.Component {
 
     render() {
         return (
             <BaseLayout>
-                <p>About Page</p>
+                <BasePage>
+                    <p>About Page</p>
+                </BasePage>
             </BaseLayout>
         )
     }
