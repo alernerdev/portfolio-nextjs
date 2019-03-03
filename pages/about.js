@@ -6,8 +6,9 @@ import BasePage from '../components/BasePage';
 class About extends React.Component {
 
     render() {
+        // auth propagated from _app.js
         return (
-            <BaseLayout>
+            <BaseLayout {...this.props.auth}>
                 <BasePage>
                     <p>About Page</p>
                 </BasePage>

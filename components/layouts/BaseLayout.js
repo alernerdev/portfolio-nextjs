@@ -2,9 +2,11 @@ import React from 'react';
 import Header from '../shared/Header';
 
 const BaseLayout = (props) => {
+    const {isAuthenticated } = props;
+
     return (
         <div className="layout-container">
-            <Header />
+            <Header isAuthenticated={isAuthenticated}/>
             <main className={`cover ${props.className}`}>
                 <div className="wrapper">
                     {props.children}

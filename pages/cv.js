@@ -7,7 +7,7 @@ class CV extends React.Component {
 
     render() {
         return (
-            <BaseLayout>
+            <BaseLayout {...this.props.auth}>
                 <BasePage>
                     <p>CV Page</p>
                 </BasePage>
