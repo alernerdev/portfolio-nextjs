@@ -79,11 +79,17 @@ class Auth0 {
         }
 
         const decodedToken = jwt.decode(token, {complete: true});
+        // if decodedToken is corrupted or wrong
+        if (!decodedToken) {
+            return undefined;
+        }
+
         const jwks = await this.getJWKS();
         const jwk = jwks.keys[0];
 
         // BUILD CERTIFICATE
         let cert = jwk.x5c[0];
+        // get an array of 64 character slices, and put a \n between them
         cert = cert.match(/.{1,64}/g).join('\n');
         cert = `-----BEGIN CERTIFICATE-----\n${cert}\n-----END CERTIFICATE-----\n`;
 
