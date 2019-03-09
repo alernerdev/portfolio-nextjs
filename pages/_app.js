@@ -14,7 +14,9 @@ class MyApp extends App {
     /* this function is executed on client and server for every page*/
     static async getInitialProps({ Component, Router, ctx }) {
         let pageProps = {};
-        const user = process.browser ? auth0.clientAuth() : auth0.serverAuth(ctx.req);
+        const user = process.browser ? 
+                await auth0.clientAuth() : 
+                await auth0.serverAuth(ctx.req);
 
         // if the page/component this wrapper is wrapping has getInitialProps 
         // defined, then call it
@@ -22,7 +24,7 @@ class MyApp extends App {
             pageProps = await Component.getInitialProps(ctx);
         }
 
-        const auth = { user, isAuthenticated: !!user };
+        const auth = { user, isAuthenticated: (user ? true : false) };
 
         return { pageProps, auth };
     }
